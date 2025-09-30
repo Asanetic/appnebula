@@ -1,0 +1,20 @@
+{
+    "smsmessages": {
+        "base": "/api/dsgportal/smsbox/smsmessages",
+        "delete": "/api/dsgportal/smsbox/delete"
+    },
+    "appcore": {
+        "sendsms": "https://asanetic.com/sms/sendsms"
+    },
+    "myaccount": {
+        "base": "/api/dairysacco/accounts/myaccount",
+        "delete": "/api/dairysacco/accounts/delete"
+    },
+    "dashboard": {
+        "admin": "/api/dairysacco/dashboard/admin"
+    },
+    "projectportfolio": {
+        "base": "/api/appnebula/apps/projectportfolio",
+        "delete": "/api/appnebula/apps/delete"
+    }
+}

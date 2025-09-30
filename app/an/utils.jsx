@@ -1,0 +1,7 @@
+import { mosySetLSData } from "../MosyUtils/hiveUtils"
+
+export function loadToken(){
+
+    const superToken =  `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb3dfY291bnQiOjEsInVzZXJfaWQiOiIxRk40WkhOIiwidGVsIjoiIiwibmFtZSI6IlN1cGVyYWRtaW4iLCJlbWFpbCI6InN1cGVyYWRtaW4iLCJoaXZlX3NpdGVfaWQiOiJMTFJSMFpLT1hSVENPSE5fMjAyNC0xMi0yOC0wNy00NS01Ni1wbSIsImhpdmVfc2l0ZV9uYW1lIjoiU3VwZXJhZG1pbiIsImV4cCI6MTgyMjMyMDk4Mn0.F6-jOhyG5ZSCobZwTmeXG523yUbM6X48pEjGvt7g4eU`
+    mosySetLSData('appNebula_authToken', superToken)
+}
