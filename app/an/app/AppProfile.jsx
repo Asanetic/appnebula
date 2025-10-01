@@ -84,7 +84,7 @@ export default function AppProfile() {
       <div className="row col-md-12 justify-content-center mb-5 gx-5">
         <div className="col-lg-8">
           <p className="text-muted mb-2"><strong>Category:</strong> {project.category}</p>
-          <div className="mb-3" dangerouslySetInnerHTML={{ __html: project.description }} />
+          <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.description }} />
           {project.tags?.length > 0 && (
             <div>
               <strong>Tags:</strong>{" "}
@@ -123,6 +123,9 @@ export default function AppProfile() {
         </div>
 
       <style jsx>{`
+        .description_isle{
+         line-height: 40px;
+        }
         .videoisle{
           height:600px;
         }
