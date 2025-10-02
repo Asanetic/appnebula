@@ -60,6 +60,7 @@ export default function AboutUs() {
         .elforge_mosy_about_img {
           border-radius: 30px;
           transition: 0.4s ease;
+          max-width:100%;
         }
         .elforge_mosy_about_img:hover {
           transform: scale(1.03);
@@ -81,11 +82,9 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="col-md-6 p-0 m-0 text-center">
-              <Image
+              <img
                 src={`${hiveRoutes.hiveBaseRoute}/api/mediaroom?media=${btoa(project.section_pic)}`}
                 alt="About Us"
-                width={500}
-                height={350}
                 className="elforge_mosy_about_img"
               />
             </div>
