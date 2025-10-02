@@ -76,7 +76,7 @@ export default function AboutUs() {
         <div className="container">
           <h2>About Us</h2>
           <div className="row align-items-center mt-5">
-            <div className="col-md-6">
+            <div className="col-md-6  order-lg-0 order-1">
               <div className="elforge_mosy_about_box">
               <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.section_content }} />
               </div>
