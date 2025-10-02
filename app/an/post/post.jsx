@@ -131,7 +131,7 @@ export default function PostProfile() {
 
         {/* Post Body */}
         <div className="post_body">
-          <h1 className="post_title">Building a Premium App Experience</h1>
+          <h1 className="post_title">{project.post_title}</h1>
 
           <div className="post_meta d-none">
             <span>By <b>Jane Doe</b></span>
@@ -140,17 +140,7 @@ export default function PostProfile() {
           </div>
 
           <div className="post_content">
-            <p>
-              Creating digital experiences that stand out requires more than just
-              functionality — it’s about design, flow, and premium feel. In this post,
-              we’ll explore how subtle shadows, soft corners, and structured grids
-              elevate a project.
-            </p>
-            <p>
-              Premium doesn’t mean complicated; it means thoughtful. Every margin,
-              every hover, every font weight works together to create an experience
-              that feels effortless but unforgettable.
-            </p>
+          <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.post }} />
           </div>          
         </div>
       </div>

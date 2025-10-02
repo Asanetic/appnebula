@@ -100,7 +100,7 @@ export function NavBar() {
                 <a className="nav-link active text-dark" href="cases"> <i className="fa fa-star"></i> Case studies</a>
               </li>
               <li className="nav-item  ml-lg-5 ">
-                <WhatsAppButton phone="254710766390" className="ml-3 text-dark" label="Hire me" />
+                <WhatsAppButton phone="254710766390" className="ml-3 text-dark" label="Get in touch" />
               </li>
             </ul>
           </div>

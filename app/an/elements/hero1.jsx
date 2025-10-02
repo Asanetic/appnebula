@@ -82,7 +82,7 @@ export default function HeroSection() {
           <h1>{project.section_title}</h1>
           <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.section_content }} />
           <button className="elforge_mosy_hero_btn">
-            <WhatsAppButton phone="254710766390" className="ml-3 text-light" label="Hire me" />
+            <WhatsAppButton phone="254710766390" className="ml-3 text-light" label="Get in touch" />
           </button>
         </div>
       </section>

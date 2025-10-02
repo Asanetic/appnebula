@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { WhatsAppButton } from "./comms";
 
 export default function Footer() {
   return (
@@ -70,13 +71,10 @@ export default function Footer() {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/about">About</Link>
+                  <Link href="about">About</Link>
                 </li>
                 <li>
-                  <Link href="/apps">Apps</Link>
-                </li>
-                <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="apps">Apps</Link>
                 </li>
               </ul>
             </div>
@@ -98,7 +96,7 @@ export default function Footer() {
           </div>
 
           <div className="elforge_mosy_footer_bottom">
-            © {new Date().getFullYear()} Elforge. All rights reserved.
+            © {new Date().getFullYear()}. All rights reserved.
           </div>
         </div>
       </footer>

@@ -107,10 +107,10 @@ export default function CaseStudies() {
                     />                     
                     <h3 className="elforge_mosy_case_title">{study.post_title}</h3>
                     <div className="elforge_mosy_case_industry">
-                      {magicTrimText(study.post_tag, 100)}
+                      {(study.post_tag)}
                     </div>
                     <p className="elforge_mosy_case_desc">
-                      {study.post}
+                    {magicTrimText(study.post, 150)}
                     </p>
                   </div>
                   <div className="col-md-12 text-right">
