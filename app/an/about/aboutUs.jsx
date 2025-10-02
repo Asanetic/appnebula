@@ -81,7 +81,7 @@ export default function AboutUs() {
               <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.section_content }} />
               </div>
             </div>
-            <div className="col-md-6 p-0 m-0 text-center">
+            <div className="col-md-6 p-0 m-0 text-center order-lg-1 order-0">
               <img
                 src={`${hiveRoutes.hiveBaseRoute}/api/mediaroom?media=${btoa(project.section_pic)}`}
                 alt="About Us"
