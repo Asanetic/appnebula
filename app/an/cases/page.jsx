@@ -1,12 +1,9 @@
 import { Suspense } from 'react';
 
-import AppList from './AppList';
-import { NavBar } from '../elements/navbar';
-    
+import { NavBar } from '../elements/navbar';    
 import { hiveRoutes } from '../../appConfigs/hiveRoutes';
-import { SeoMeta } from '../elements/seoTag';
-import HeroSection from '../elements/hero1';
-import HeroSectionv2 from '../elements/hero2';
+import AppList from '../apps/AppList';
+import CaseStudies from './caseStudies';
 import Footer from '../elements/footer';
 
 export async function generateMetadata({ searchParams }) {
@@ -30,9 +27,10 @@ return (
               <div className="content container-fluid p-0 m-0 ">
                <Suspense fallback={<div className="col-md-12 p-5 text-center h3">Loading...</div>}>
                     <NavBar/> 
-                    <HeroSection/>
+                    <CaseStudies/>
                     <AppList />
-                    <Footer/>                    
+                    <Footer/>
+                    
                   </Suspense>                 
             </div>
           </div>

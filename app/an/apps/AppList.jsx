@@ -57,7 +57,7 @@ export default function AppList() {
     setFilteredProjects(filtered);
   }, [activeCategory, activeTag, projects]);
 
-  if (loading) return <p className="p-5 text-center col-md-12 ">Loading business apps ...</p>;
+  if (loading) return <p className="text-center mt-5"><i className='fa fa-spinner fa-spin'></i> ...</p>;
   if (!projects.length) return <p className="p-5 text-center col-md-12 " >No projects found.</p>;
 
   return (
@@ -66,11 +66,11 @@ export default function AppList() {
         
         {/* Category Filter */}
     <div className="mb-3 col-md-12 p-3 border-bottom border-info position-relative">
-    <div className="col-md-12 p-0 py-2 mb-2">
+    <div className="col-md-12 p-0 py-3 mb-2 h2">
         <b>Your haven for business apps</b>
     </div>
-    <strong className="mr-2  badge"> Pick an app category that suits your business : </strong>
-    <div className="col-md-12 p-0 py-2 mb-2"></div>
+    <div className="mb-3 col-md-12 p-0 m-0"><strong className="mr-2  h4 "> Any app for any industry </strong></div>
+    <div className="col-md-12 p-0 py-2 mb-3"></div>
     {/* Left Arrow */}
     <button
         className="scroll-btn left "
@@ -121,22 +121,22 @@ export default function AppList() {
 
     .scroll-btn {
         position: absolute;
-        top: 65%;
+        top: 74%;
         transform: translateY(-20%);
         background: white;
         border: none;
         padding: 8px;
         cursor: pointer;
         z-index: 10;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         border-radius: 50%;
         color: #333;
+
     }
     .scroll-btn.left {
-        left: 0;
+        left: 5px;
     }
     .scroll-btn.right {
-        right: 0;
+        right: 5px;
     }
     .scroll-btn:hover {
         background: #f8f9fa;

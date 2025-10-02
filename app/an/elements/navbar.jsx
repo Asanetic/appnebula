@@ -1,10 +1,19 @@
 "use client";
-import { useState , useEffect } from "react";
-import { hiveRoutes } from "../appConfigs/hiveRoutes";
+
+import React, { useState, useEffect } from "react";
+
+import { hiveRoutes } from "../../appConfigs/hiveRoutes";
 import { WhatsAppButton } from "./comms";
 import { FloatingContactBubbles } from "./floatingCommsBtn";
 import { SeoMeta } from "./seoTag";
 import { loadToken } from "./utils";
+
+
+import { mosyGetData, mosyBtoa, mosyUrlParam } from '../../MosyUtils/hiveUtils';
+import { getApiRoutes } from '../../appnebula/AppRoutes/apiRoutesHandler';
+import PageOverlayLoader from "./loader";
+
+const apiRoutes = getApiRoutes();
 
 export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +35,30 @@ export function NavBar() {
 
   loadToken()
 
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+      async function loadContent() {
+        try {
+          const data = await mosyGetData({ 
+            endpoint: `${apiRoutes.webcontent.base}`, 
+            params: { q: mosyBtoa(`where section_key='siteConfig'`), fullQ: true } 
+          });
+          setProject(data.data?.[0] || null);
+        } catch (err) {
+          console.error("Error loading project:", err);
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      loadContent();
+    }, []);
+
+    if (loading) return <p className="text-center mt-5"><i className='fa fa-spinner fa-spin'></i> ...</p>;
+    if (!project) return <p className="text-center mt-5">Section not found.</p>;
+
   return (
     <>
     <SeoMeta/>
@@ -39,7 +72,7 @@ export function NavBar() {
               className="navlogo rounded-circle"
               alt="Logo"
             />
-            Kibao Business Apps
+            {project.section_title}
           </a>
 
           {/* Hamburger toggle */}
@@ -60,8 +93,14 @@ export function NavBar() {
               <li className="nav-item ml-lg-5">
                 <a className="nav-link active text-dark" href="apps"> <i className="fa fa-home"></i> Business apps</a>
               </li>
+              <li className="nav-item ml-lg-5">
+                <a className="nav-link active text-dark" href="about"> <i className="fa fa-info"></i> About</a>
+              </li>
+              <li className="nav-item ml-lg-5">
+                <a className="nav-link active text-dark" href="cases"> <i className="fa fa-star"></i> Case studies</a>
+              </li>
               <li className="nav-item  ml-lg-5 ">
-                <WhatsAppButton phone="254710766390" className="ml-3 text-dark" label="Get a Quote" />
+                <WhatsAppButton phone="254710766390" className="ml-3 text-dark" label="Hire me" />
               </li>
             </ul>
           </div>

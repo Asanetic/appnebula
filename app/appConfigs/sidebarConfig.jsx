@@ -10,6 +10,24 @@ export const sidebarConfig = [
     roles: [] 
   },
 
+    // Dashboard
+    { 
+      type: "link", 
+      label: "New post", 
+      icon: "fa fa-edit", 
+      href: (routes) => `${routes.cms}/blogposts/profile`, 
+      roles: [] 
+    },
+
+      // Dashboard
+  { 
+    type: "link", 
+    label: "New section", 
+    icon: "fa fa-book", 
+    href: (routes) => `${routes.cms}/content/profile`, 
+    roles: [] 
+  },
+
   // Projects
   {
     type: "submenu",
@@ -25,9 +43,18 @@ export const sidebarConfig = [
   // Web
   { 
     type: "link", 
-    label: "New project", 
-    icon: "fa fa-plus-circle", 
-    href: (routes) => `${routes.cms}/apps/profile`, 
+    label: "Web content", 
+    icon: "fa fa-book", 
+    href: (routes) => `${routes.cms}/content/list`, 
+    roles: [] 
+  },
+
+  // Web
+  { 
+    type: "link", 
+    label: "Blog", 
+    icon: "fa fa-list", 
+    href: (routes) => `${routes.cms}/blogposts/list`, 
     roles: [] 
   },
 

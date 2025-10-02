@@ -3,7 +3,8 @@ import { Suspense } from 'react';
 import AppProfile from './AppProfile';
     
 import { hiveRoutes } from '../../appConfigs/hiveRoutes';
-import { NavBar } from '../Includes';
+import { NavBar } from '../elements/navbar';
+import Footer from '../elements/footer';
 
 export async function generateMetadata({ searchParams }) {
   const mosyTitle = "App Nebula Portfolio "//searchParams?.mosyTitle || "Project Portfolio";
@@ -28,7 +29,7 @@ return (
                
                     <NavBar/>                      
                     <AppProfile />
-
+                    <Footer/>
                     
                   </Suspense>                 
             </div>

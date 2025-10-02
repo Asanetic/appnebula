@@ -16,5 +16,13 @@
     "projectportfolio": {
         "base": "/api/appnebula/apps/projectportfolio",
         "delete": "/api/appnebula/apps/delete"
+    },
+    "webcontent": {
+        "base": "/api/appnebula/content/webcontent",
+        "delete": "/api/appnebula/content/delete"
+    },
+    "blogposts": {
+        "base": "/api/appnebula/blogposts/blogposts",
+        "delete": "/api/appnebula/blogposts/delete"
     }
 }

@@ -22,7 +22,7 @@ $overwrite_dna_file = "yes"; // yes | no
    ========================= */
 eval(find_snippet("1171"));   // camelCase converter
 
-$table_config_file__ = "../appdna/appnebula/projects/tbl_attr/projects_config.php";
+$table_config_file__ = "../appdna/appnebula/blog_posts/tbl_attr/blog_posts_config.php";
 
 include($table_config_file__);
 

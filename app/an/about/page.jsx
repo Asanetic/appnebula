@@ -1,13 +1,13 @@
 import { Suspense } from 'react';
 
-import AppList from './AppList';
 import { NavBar } from '../elements/navbar';
     
 import { hiveRoutes } from '../../appConfigs/hiveRoutes';
 import { SeoMeta } from '../elements/seoTag';
 import HeroSection from '../elements/hero1';
 import HeroSectionv2 from '../elements/hero2';
-import Footer from '../elements/footer';
+import AboutUs from './aboutUs';
+import AppList from '../apps/AppList';
 
 export async function generateMetadata({ searchParams }) {
   const mosyTitle = "App Nebula Portfolio "//searchParams?.mosyTitle || "Project Portfolio";
@@ -30,9 +30,9 @@ return (
               <div className="content container-fluid p-0 m-0 ">
                <Suspense fallback={<div className="col-md-12 p-5 text-center h3">Loading...</div>}>
                     <NavBar/> 
-                    <HeroSection/>
+                    <AboutUs/>
                     <AppList />
-                    <Footer/>                    
+                    
                   </Suspense>                 
             </div>
           </div>

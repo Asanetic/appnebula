@@ -1,5 +1,8 @@
 const MosyColumnFactory = {
 
+   //-- blog_posts cols--//
+  blog_posts: ["post_id", "date_posted", "post_title", "post", "post_photo", "post_tag", "date_updated", "published", "post_keywords", "admin_id", "month_year", "hive_site_id", "hive_site_name", "publisher", "publisher_name"],
+
    //-- page_manifest_ cols--//
   page_manifest_: ["manikey", "page_group", "site_id", "page_url", "hive_site_id", "hive_site_name", "project_id", "project_name"],
 
@@ -17,6 +20,9 @@ const MosyColumnFactory = {
 
    //-- user_manifest_ cols--//
   user_manifest_: ["admin_mkey", "user_id", "user_name", "role_id", "site_id", "role_name", "hive_site_id", "hive_site_name", "project_id", "project_name"],
+
+   //-- web_content cols--//
+  web_content: ["site_cont_key", "section_title", "section_pic", "section_content", "section_tag", "custom_field_1", "custom_field_2", "custom_field_3", "custom_field_4", "custom_field_5", "custom_field_6", "hive_site_id", "hive_site_name", "section_key", "page_name", "site_name", "advanced_content"],
 
 
 };

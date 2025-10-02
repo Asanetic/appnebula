@@ -1,4 +1,4 @@
-import { mosySetLSData } from "../MosyUtils/hiveUtils"
+import { mosySetLSData } from "../../MosyUtils/hiveUtils"
 
 export function loadToken(){
 
