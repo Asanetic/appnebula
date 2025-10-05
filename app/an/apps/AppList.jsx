@@ -7,11 +7,8 @@ import { hiveRoutes } from "../../appConfigs/hiveRoutes";
 
 const apiRoutes = getApiRoutes();
 
-//426 27 60 = 1000/ joseph 
-//milk 2448 /=
-
 export default function AppList() {
-  
+
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
