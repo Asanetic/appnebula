@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { magicTrimText, mosyGetData } from '../../MosyUtils/hiveUtils';
+import { magicTrimText, mosyBtoa, mosyGetData } from '../../MosyUtils/hiveUtils';
 import { getApiRoutes } from '../../appnebula/AppRoutes/apiRoutesHandler';
 import { hiveRoutes } from "../../appConfigs/hiveRoutes";
 
 const apiRoutes = getApiRoutes();
 
+//426 27 60 = 1000/ joseph 
+//milk 2448 /=
+
 export default function AppList() {
+  
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,11 +20,29 @@ export default function AppList() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeTag, setActiveTag] = useState("All");
 
+  const [afterHero, setAfterHero] = useState([]);
+  const [loadingAfterHero, setloadingAfterHero] = useState([]);
+
+      async function loadContent() {
+        try {
+          const data = await mosyGetData({ 
+            endpoint: `${apiRoutes.webcontent.base}`, 
+            params: { q: mosyBtoa(`where section_key='afterhero'`), fullQ: true } 
+          });
+          setAfterHero(data.data?.[0] || null);
+        } catch (err) {
+          console.error("Error loading project:", err);
+        } finally {
+          setLoading(false);
+        }
+      }
+
   useEffect(() => {
     async function loadProjects() {
       try {
         const data = await mosyGetData({ endpoint: apiRoutes.projectportfolio.base });
         const projList = data.data || [];
+
         setProjects(projList);
         setFilteredProjects(projList);
 
@@ -40,6 +62,8 @@ export default function AppList() {
     }
 
     loadProjects();
+    loadContent()
+
   }, []);
 
   // Filter projects based on active category and tag
@@ -67,9 +91,9 @@ export default function AppList() {
         {/* Category Filter */}
     <div className="mb-3 col-md-12 p-3 border-bottom border-info position-relative">
     <div className="col-md-12 p-0 py-3 mb-2 h2">
-        <b>Your haven for business apps</b>
+        <b>{afterHero.section_title}</b>
     </div>
-    <div className="mb-3 col-md-12 p-0 m-0"><strong className="mr-2  h4 "> Any app for any industry </strong></div>
+    <div className="mb-3 col-md-12 p-0 m-0"><strong className="mr-2  h4 "> {afterHero.section_content} </strong></div>
     <div className="col-md-12 p-0 py-2 mb-3"></div>
     {/* Left Arrow */}
     <button
