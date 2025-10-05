@@ -40,7 +40,7 @@ export default function HeroSection() {
     <>
       <style jsx>{`
         .elforge_mosy_hero_v1 {
-          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
             url("${hiveRoutes.hiveBaseRoute}/api/mediaroom?media=${btoa(project.section_pic)}") center/cover no-repeat;
           min-height: 100vh;
           display: flex;
