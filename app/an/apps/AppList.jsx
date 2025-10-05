@@ -20,21 +20,22 @@ export default function AppList() {
   const [afterHero, setAfterHero] = useState([]);
   const [loadingAfterHero, setloadingAfterHero] = useState([]);
 
-      async function loadContent() {
-        try {
-          const data = await mosyGetData({ 
-            endpoint: `${apiRoutes.webcontent.base}`, 
-            params: { q: mosyBtoa(`where section_key='afterhero'`), fullQ: true } 
-          });
-          setAfterHero(data.data?.[0] || null);
-        } catch (err) {
-          console.error("Error loading project:", err);
-        } finally {
-          setAfterHero(false);
-        }
-      }
-
   useEffect(() => {
+
+    async function loadContent() {
+      try {
+        const data = await mosyGetData({ 
+          endpoint: `${apiRoutes.webcontent.base}`, 
+          params: { q: mosyBtoa(`where section_key='afterhero'`), fullQ: true } 
+        });
+        setAfterHero(data.data?.[0] || null);
+      } catch (err) {
+        console.error("Error loading project:", err);
+      } finally {
+        setAfterHero(false);
+      }
+    }
+
     async function loadProjects() {
       try {
         const data = await mosyGetData({ endpoint: apiRoutes.projectportfolio.base });
