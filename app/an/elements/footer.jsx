@@ -68,7 +68,7 @@ export default function Footer() {
               <h5>Quick Links</h5>
               <ul className="elforge_mosy_footer_links">
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="apps">Home</Link>
                 </li>
                 <li>
                   <Link href="about">About</Link>

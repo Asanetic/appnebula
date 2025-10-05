@@ -6,11 +6,11 @@ import React, { useState, useEffect } from "react";
 import { mosyGetData, mosyBtoa, mosyUrlParam } from '../../MosyUtils/hiveUtils';
 import { getApiRoutes } from '../../appnebula/AppRoutes/apiRoutesHandler';
 import { hiveRoutes } from "../../appConfigs/hiveRoutes";
-import { MosyTitleTag } from "../../mosybilling/UiControl/componentControl";
+import { setClientMetadata } from "../elements/pageMeta";
 
 const apiRoutes = getApiRoutes();
 
-export default function AboutUs() {
+export default function AboutUs({loadMeta =  true}) {
 
   const params = mosyUrlParam("id"); // expects { id }
   const [project, setProject] = useState(null);
@@ -24,6 +24,12 @@ export default function AboutUs() {
           params: { q: mosyBtoa(`where section_key='aboutus'`), fullQ: true } 
         });
         setProject(data.data?.[0] || null);
+
+        setClientMetadata({
+          title: project?.section_title|| " Kibao business apps",
+          force : loadMeta      
+        });  
+
       } catch (err) {
         console.error("Error loading project:", err);
       } finally {

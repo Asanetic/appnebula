@@ -5,10 +5,11 @@ import { mosyBtoa, mosyGetData, mosyUrlParam } from "../../MosyUtils/hiveUtils";
 
 import { getApiRoutes } from "../../appnebula/AppRoutes/apiRoutesHandler";
 import { hiveRoutes } from "../../appConfigs/hiveRoutes";
+import { setClientMetadata } from "../elements/pageMeta";
 
 const apiRoutes =  getApiRoutes()
 
-export default function PostProfile() {
+export default function PostProfile({loadMeta = true}) {
 
       const params = mosyUrlParam("id"); // expects { id }
       const [project, setProject] = useState(null);
@@ -32,6 +33,13 @@ export default function PostProfile() {
         loadProject();
       }, [params]);
     
+      useEffect(() => {
+          setClientMetadata({
+            title: project?.post_title|| " Kibao business apps",
+            force : loadMeta      
+          });    
+      }, [project]);
+
       if (loading) return <p className="text-center mt-5">Loading app...</p>;
       if (!project) return <p className="text-center mt-5">App not found.</p>;
     

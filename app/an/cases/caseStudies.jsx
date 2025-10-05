@@ -6,10 +6,9 @@ import { hiveRoutes } from "../../appConfigs/hiveRoutes";
 
 const apiRoutes = getApiRoutes()
 
-export default function CaseStudies() {
+export default function CaseStudies({loadMeta = true}) {
   const [studies, setStudies] = useState([]);
   const [loading, setLoading] = useState(true);
-
 
     useEffect(() => {
       async function loadCases() {

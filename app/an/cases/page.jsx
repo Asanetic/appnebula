@@ -7,7 +7,7 @@ import CaseStudies from './caseStudies';
 import Footer from '../elements/footer';
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "App Nebula Portfolio "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
     title: mosyTitle ? decodeURIComponent(mosyTitle) : `Project Portfolio`,
