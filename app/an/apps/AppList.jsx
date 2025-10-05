@@ -32,7 +32,7 @@ export default function AppList() {
       } catch (err) {
         console.error("Error loading project:", err);
       } finally {
-        setAfterHero(false);
+        setloadingAfterHero(false);
       }
     }
 
