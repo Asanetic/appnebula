@@ -70,24 +70,33 @@ export default function AboutUs() {
           padding: 30px;
           border-radius: 20px;
         }
+         
+        .description_isle{
+          line-height:35px;
+        }
       `}</style>
 
       <section className="elforge_mosy_about_v1">
         <div className="container">
-          <h2>About Us</h2>
+          <h2>{project.section_title}</h2>
           <div className="row align-items-center mt-5">
-            <div className="col-md-6  order-lg-0 order-1">
+            <div className="col-md-8  order-lg-0 order-1">
               <div className="elforge_mosy_about_box">
               <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.section_content }} />
               </div>
             </div>
-            <div className="col-md-6 p-0 m-0 text-center order-lg-1 order-0">
+            <div className="col-md-4 p-0 m-0 text-center order-lg-1 order-0">
               <img
                 src={`${hiveRoutes.hiveBaseRoute}/api/mediaroom?media=${btoa(project.section_pic)}`}
                 alt="About Us"
                 className="elforge_mosy_about_img"
               />
             </div>
+            <div className="col-md-12 order-2">
+              <div className="elforge_mosy_about_box">
+              <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.advanced_content }} />
+              </div>
+            </div>            
           </div>
         </div>
       </section>
