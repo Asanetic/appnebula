@@ -41,9 +41,6 @@ export default function AboutUs() {
   return (
     <>
       <style jsx>{`
-        .elforge_mosy_about_v1 {
-          padding: 80px 20px;
-        }
         .elforge_mosy_about_v1 h2 {
           font-size: 2.5rem;
           font-weight: 700;
@@ -76,25 +73,26 @@ export default function AboutUs() {
         }
       `}</style>
 
-      <section className="elforge_mosy_about_v1">
-        <div className="container">
-          <h2>{project.section_title}</h2>
-          <div className="row align-items-center mt-5">
-            <div className="col-md-8  order-lg-0 order-1">
-              <div className="elforge_mosy_about_box">
-              <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.section_content }} />
+      <section className="elforge_mosy_about_v1 col-md-12 p-0 m-0">
+        <div className="p-0 m-0 p-lg-5 m-lg-5 col-md-12">
+          <h2 className="pt-5">{project.section_title}</h2>
+          <div className="row align-items-center mt-5 p-0 m-0 ">
+            <div className="col-md-8  order-lg-0 order-1 p-3 m-0 p-lg-5 m-lg-5">
+              <div className="col-md-12 p-3 m-0 p-lg-5 m-lg-5">
+              <div className="mb-3 description_isle col-md-12 p-0 m-0 " dangerouslySetInnerHTML={{ __html: project.section_content }} />
               </div>
             </div>
-            <div className="col-md-4 p-0 m-0 text-center order-lg-1 order-0">
+            <div className="col-md-4  p-3 m-0 p-lg-5 m-lg-5 text-center order-lg-1 order-0">
               <img
                 src={`${hiveRoutes.hiveBaseRoute}/api/mediaroom?media=${btoa(project.section_pic)}`}
                 alt="About Us"
                 className="elforge_mosy_about_img"
               />
+              <div className="col-md-12 p-3"></div>
             </div>
-            <div className="col-md-12 order-2">
-              <div className="elforge_mosy_about_box">
-              <div className="mb-3 description_isle" dangerouslySetInnerHTML={{ __html: project.advanced_content }} />
+            <div className="col-md-12 order-2 p-0 m-0 ">
+              <div className="col-md-12  p-3 m-2 p-lg-5 m-lg-5">
+              <div className="mb-3 description_isle col-md-12 p-0 m-0 " dangerouslySetInnerHTML={{ __html: project.advanced_content }} />
               </div>
             </div>            
           </div>
