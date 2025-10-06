@@ -27,7 +27,10 @@ export default function AppList({loadMeta=true}) {
       try {
         const data = await mosyGetData({ 
           endpoint: `${apiRoutes.webcontent.base}`, 
-          params: { q: mosyBtoa(`where section_key='afterhero'`), fullQ: true } 
+          params: { q: mosyBtoa(`where section_key='afterhero'`),
+          fullQ: true,
+          pagination : `l:qprojects_page:100:1`,
+          } 
         });
         setAfterHero(data.data?.[0] || null);
       } catch (err) {
