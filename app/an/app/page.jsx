@@ -6,6 +6,18 @@ import { hiveRoutes } from '../../appConfigs/hiveRoutes';
 import { NavBar } from '../elements/navbar';
 import Footer from '../elements/footer';
 
+export async function generateMetadata({ searchParams }) {
+  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
+
+  return {
+    title: mosyTitle,
+    description: 'The app nebula. Your haven for business custom software',
+    
+    icons: {
+      icon: `${hiveRoutes.hiveBaseRoute}/logo.png`
+    },    
+  };
+}
 
 export default function ProjectportfolioMainListPage() {
 

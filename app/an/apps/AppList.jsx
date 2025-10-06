@@ -89,13 +89,6 @@ export default function AppList({loadMeta=true}) {
     setFilteredProjects(filtered);
   }, [activeCategory, activeTag, projects]);
 
-  useEffect(() => {
-      setClientMetadata({
-        title: afterHero?.section_title || " Kibao business apps",
-        force : loadMeta      
-      });    
-  }, [afterHero]);
-
   if (loading) return <p className="text-center mt-5"><i className='fa fa-spinner fa-spin'></i> ...</p>;
   if (!projects.length) return <p className="p-5 text-center col-md-12 " >No projects found.</p>;
 
