@@ -10,11 +10,11 @@ import AboutUs from './aboutUs';
 import AppList from '../apps/AppList';
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "App Nebula Portfolio "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
-    title: mosyTitle ? decodeURIComponent(mosyTitle) : `Project Portfolio`,
-    description: 'appnebula Project Portfolio',
+    title: mosyTitle,
+    description: 'The app nebula. Your haven for business custom software',
     
     icons: {
       icon: `${hiveRoutes.hiveBaseRoute}/logo.png`
