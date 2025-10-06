@@ -11,8 +11,7 @@ export async function generateMetadata({ searchParams }) {
 
   return {
     title: mosyTitle,
-    description: 'The app nebula. Your haven for business custom software',
-    
+    description: 'App Nebula: your haven for tailored business software.',        
     icons: {
       icon: `${hiveRoutes.hiveBaseRoute}/logo.png`
     },    

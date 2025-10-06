@@ -3,9 +3,6 @@ import { Suspense } from 'react';
 import { NavBar } from '../elements/navbar';
     
 import { hiveRoutes } from '../../appConfigs/hiveRoutes';
-import { SeoMeta } from '../elements/seoTag';
-import HeroSection from '../elements/hero1';
-import HeroSectionv2 from '../elements/hero2';
 import AboutUs from './aboutUs';
 import AppList from '../apps/AppList';
 
@@ -14,8 +11,7 @@ export async function generateMetadata({ searchParams }) {
 
   return {
     title: mosyTitle,
-    description: 'The app nebula. Your haven for business custom software',
-    
+    description: 'App Nebula: your haven for tailored business software.',        
     icons: {
       icon: `${hiveRoutes.hiveBaseRoute}/logo.png`
     },    
