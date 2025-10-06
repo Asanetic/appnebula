@@ -18,6 +18,7 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
+
 export default function ProjectportfolioMainListPage() {
 
 return (
