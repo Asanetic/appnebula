@@ -42,7 +42,13 @@ export default function AppList({loadMeta=true}) {
 
     async function loadProjects() {
       try {
-        const data = await mosyGetData({ endpoint: apiRoutes.projectportfolio.base });
+        const data = await mosyGetData({
+           endpoint: apiRoutes.projectportfolio.base,
+           params :{         
+            fullQ: true,
+            pagination : `l:qprojects_page:100:1`
+           }});
+           
         const projList = data.data || [];
 
         setProjects(projList);

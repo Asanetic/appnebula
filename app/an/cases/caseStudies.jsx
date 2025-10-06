@@ -15,8 +15,9 @@ export default function CaseStudies({loadMeta = true}) {
         try {
           const data = await mosyGetData({
              endpoint: apiRoutes.blogposts.base,
-            fullQ :true,
-            pagination : `l:qblog_posts_page:100:100`,
+            params:{ 
+            fullQ :false,
+            pagination : `l:qblog_posts_page:100:100`}
           });
           const studies = data.data || [];
           setStudies(studies);
