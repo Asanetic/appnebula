@@ -6,18 +6,6 @@ import { hiveRoutes } from '../../appConfigs/hiveRoutes';
 import { NavBar } from '../elements/navbar';
 import Footer from '../elements/footer';
 
-export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "App Nebula Portfolio "//searchParams?.mosyTitle || "Project Portfolio";
-
-  return {
-    title: mosyTitle ? decodeURIComponent(mosyTitle) : `Project Portfolio`,
-    description: 'appnebula Project Portfolio',
-    
-    icons: {
-      icon: `${hiveRoutes.hiveBaseRoute}/logo.png`
-    },    
-  };
-}
 
 export default function ProjectportfolioMainListPage() {
 

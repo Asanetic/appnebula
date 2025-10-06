@@ -100,9 +100,7 @@ export default function AppList({loadMeta=true}) {
   if (!projects.length) return <p className="p-5 text-center col-md-12 " >No projects found.</p>;
 
   return (
-    <div className="row justify-content-center col-md-12 m-0 p-0 mt-4">
-
-        
+    <div className="row justify-content-center col-md-12 m-0 p-0 mt-4">      
         {/* Category Filter */}
     <div className="mb-3 col-md-12 p-3 border-bottom border-info position-relative">
     <div className="col-md-12 p-0 py-3 mb-2 h2">
