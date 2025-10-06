@@ -17,7 +17,7 @@ export default function CaseStudies({loadMeta = true}) {
              endpoint: apiRoutes.blogposts.base,
             params:{ 
             fullQ :false,
-            pagination : `l:qblog_posts_page:100:100`}
+            pagination : `l:qblog_posts_page:100:1`}
           });
           const studies = data.data || [];
           setStudies(studies);
