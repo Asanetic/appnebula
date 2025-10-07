@@ -7,7 +7,7 @@ import AboutUs from './aboutUs';
 import AppList from '../apps/AppList';
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "Our story : Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
     title: mosyTitle,
@@ -28,6 +28,7 @@ return (
                     <NavBar/> 
                     <AboutUs/>
                     <AppList />
+                    <Footer/>
                     
                   </Suspense>                 
             </div>

@@ -100,6 +100,8 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+      <script type="text/javascript" src="https://cora.asanetic.com/cora.js?coraasset=Kibao apps"></script>
+
     </>
   );
 }

@@ -6,7 +6,7 @@ import Footer from '../elements/footer';
 import PostProfile from './post';
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "Case Studies  : Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
     title: mosyTitle,

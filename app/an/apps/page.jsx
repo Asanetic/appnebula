@@ -6,7 +6,7 @@ import Footer from '../elements/footer';
 import { hiveRoutes } from "../../appConfigs/hiveRoutes";
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "Apps : Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
     title: mosyTitle,

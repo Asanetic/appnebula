@@ -7,7 +7,7 @@ import { NavBar } from '../elements/navbar';
 import Footer from '../elements/footer';
 
 export async function generateMetadata({ searchParams }) {
-  const mosyTitle = "Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
+  const mosyTitle = "App Profile : Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
 
   return {
     title: mosyTitle,
