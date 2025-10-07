@@ -5,6 +5,7 @@ import { NavBar } from '../elements/navbar';
 import { hiveRoutes } from '../../appConfigs/hiveRoutes';
 import AboutUs from './aboutUs';
 import AppList from '../apps/AppList';
+import Footer from '../elements/footer';
 
 export async function generateMetadata({ searchParams }) {
   const mosyTitle = "Our story : Kibao business apps "//searchParams?.mosyTitle || "Project Portfolio";
