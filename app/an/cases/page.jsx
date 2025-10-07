@@ -18,9 +18,9 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-
 export default function ProjectportfolioMainListPage() {
 
+  
 return (
         <>
          <div className="main-wrapper">
