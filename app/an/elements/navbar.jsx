@@ -90,16 +90,20 @@ export function NavBar() {
           {/* Menu items */}
           <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item ml-lg-5">
+              <li className="nav-item ml-lg-3">
                 <a className="nav-link active text-dark" href="apps"> <i className="fa fa-home"></i> Business apps</a>
               </li>
-              <li className="nav-item ml-lg-5">
-                <a className="nav-link active text-dark" href="about"> <i className="fa fa-info"></i> About</a>
+              <li className="nav-item ml-lg-3">
+                <a className="nav-link active text-dark" href="about"> <i className="fa fa-info-circle"></i> About</a>
               </li>
-              <li className="nav-item ml-lg-5">
+              <li className="nav-item ml-lg-3">
                 <a className="nav-link active text-dark" href="cases"> <i className="fa fa-star"></i> Case studies</a>
               </li>
-              <li className="nav-item  ml-lg-5 ">
+              <li className="nav-item ml-lg-3">
+                <a className="nav-link active text-dark" href="testimonials"> <i className="fa fa-comments"></i> Testimonials</a>
+              </li>
+                            
+              <li className="nav-item  ml-lg-3 ">
                 <WhatsAppButton phone="254710766390" className="ml-3 text-dark" label="Get in touch" />
               </li>
             </ul>

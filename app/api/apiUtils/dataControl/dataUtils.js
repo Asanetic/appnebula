@@ -282,7 +282,7 @@ export async function mosyFlexSelect(queryParams = {}, mutations = {}, mutationC
       data: pagedData,
       first_row: firstRow,
       page_count: pageCount,
-      //query_string: sql,
+      query_string: sql,
       //pagination_sql: paginationSql
     };
   } else {
@@ -292,7 +292,7 @@ export async function mosyFlexSelect(queryParams = {}, mutations = {}, mutationC
       data: results,
       first_row: '',
       page_count: '',
-      //query_string: sql,
+      query_string: sql,
       //pagination_sql: ''
     };
   }

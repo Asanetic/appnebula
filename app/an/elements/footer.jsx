@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { WhatsAppButton } from "./comms";
+import TestimonialsSection from "../testimonials/testimonialcard";
+import ClientsSection from "../testimonials/clientdata";
 
 export default function Footer() {
   return (
